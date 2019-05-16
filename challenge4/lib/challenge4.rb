@@ -9,13 +9,16 @@ class Challenge4
   def self._factorial(number, value)
     # write your solution here
     result = 1
-    number.to_s.split("_").each do |num| 
-      num = num.to_i
-      if num <= 1
-        return 1
-      else
-        result = result * num
-        num -= 1
+    if number == 0
+      return result
+    else
+      number.times do
+        if number <= 1
+          return result
+        else
+          result = result * number
+          number -= 1
+        end
       end
     end
   end
