@@ -1,5 +1,5 @@
 class Challenge4
-  attr_reader :number, :num
+
   def self.factorial(number)
     _factorial(number, 1)
   end
@@ -11,14 +11,11 @@ class Challenge4
     result = 1
     number.to_s.split("_").each do |num| 
       num = num.to_i
-      if num < 0
-          value
-      elsif num == 0
-          value
+      if num <= 1
+        return 1
       else
         result = result * num
         num -= 1
-        result
       end
     end
   end
